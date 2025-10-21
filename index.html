@@ -1,484 +1,72 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KAUANZERA DAS SENSIBILIDADES</title>
-    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Press+Start+2P&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        :root {
-            --ff-orange: #FF7A00;
-            --ff-red: #FF0000;
-            --ff-dark: #222222;
-            --ff-gold: #FFD700;
-        }
-        
-        body {
-            font-family: 'Bungee', cursive;
-            background-color: var(--ff-dark);
-            color: white;
-            overflow-x: hidden;
-        }
-        
-        .hero-section {
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/d9d84809-c8ef-428e-a189-08cc57190a18.png');
-            background-size: cover;
-            background-position: center;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-        }
-        
-        .logo {
-            font-family: 'Press Start 2P', cursive;
-            color: var(--ff-orange);
-            text-shadow: 0 0 10px rgba(255, 122, 0, 0.7);
-            font-size: 3rem;
-            margin-bottom: 2rem;
-        }
-        
-        .btn-primary {
-            background-color: var(--ff-orange);
-            color: white;
-            padding: 1rem 2rem;
-            border: none;
-            border-radius: 5px;
-            font-size: 1.2rem;
-            cursor: pointer;
-            transition: all 0.3s;
-            text-transform: uppercase;
-            font-weight: bold;
-        }
-        
-        .btn-primary:hover {
-            background-color: var(--ff-red);
-            transform: scale(1.05);
-        }
-        
-        .character-card {
-            background-color: #333;
-            border-radius: 10px;
-            overflow: hidden;
-            transition: all 0.3s;
-            box-shadow: 0 0 15px rgba(255, 122, 0, 0.3);
-        }
-        
-        .character-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 0 25px rgba(255, 122, 0, 0.5);
-        }
-        
-        .feature-box {
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
-            padding: 2rem;
-            transition: all 0.3s;
-        }
-        
-        .feature-box:hover {
-            background-color: rgba(255, 122, 0, 0.1);
-            transform: scale(1.02);
-        }
-        
-        .glow-text {
-            text-shadow: 0 0 10px rgba(255, 122, 0, 0.7);
-        }
-        
-        .divider {
-            height: 5px;
-            background: linear-gradient(to right, transparent, var(--ff-orange), transparent);
-            margin: 3rem 0;
-        }
-        
-        .news-card {
-            background-color: rgba(0, 0, 0, 0.5);
-            border-left: 5px solid var(--ff-orange);
-            transition: all 0.3s;
-        }
-        
-        .news-card:hover {
-            background-color: rgba(0, 0, 0, 0.7);
-            transform: translateY(-5px);
-        }
-        
-        .footer {
-            background-color: #111;
-            padding: 3rem 0;
-            position: relative;
-        }
-        
-        .footer::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 3px;
-            background: linear-gradient(to right, var(--ff-red), var(--ff-orange));
-        }
-        
-        .page {
-            display: none;
-            width: 100%;
-        }
-        
-        .page.active {
-            display: block;
-            animation: fadeIn 0.5s ease-in-out;
-        }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
-        }
-        
-        .pulse {
-            animation: pulse 2s infinite;
-        }
-        
-        .rank-badge {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 1.5rem;
-            font-weight: bold;
-            margin: 0 auto;
-            background: linear-gradient(135deg, var(--ff-orange), var(--ff-gold));
-            color: var(--ff-dark);
-        }
-    </style>
+    <title>TVS.pod - Vendas de Pods IGNET</title>
+    <link rel="stylesheet" href="style.css"> <!-- Vinculando o CSS -->
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="bg-black py-4 px-6 sticky top-0 z-50 border-b border-orange-500">
-        <div class="container mx-auto flex justify-between items-center">
-            <div class="logo text-orange-500 text-2xl">FF SENSIBILIDADES</div>
-            <div class="flex space-x-4">
-                <a href="#" class="px-4 py-2 text-white hover:text-orange-500 transition">Início</a>
-                <a href="#" class="px-4 py-2 text-white hover:text-orange-500 transition">Marcas</a>
-                <a href="#" class="px-4 py-2 text-white hover:text-orange-500 transition">Configurações</a>
-                <a href="#" class="px-4 py-2 text-white hover:text-orange-500 transition">Notícias</a>
-                <a href="#" class="px-4 py-2 bg-orange-500 text-white rounded hover:bg-orange-600 transition">Contato</a>
-            </div>
+    <header>
+        <div class="logo">
+            <h1>TVS.pod</h1>
         </div>
-    </nav>
-
-    <!-- Page Containers -->
-    <div id="pages-container" class="overflow-hidden relative">
-        <!-- Page 1 - Hero Section -->
-        <div id="page1" class="page active">
-        <section class="hero-section">
-        <h1 class="logo">FREE FIRE SENSIBILIDADES</h1>
-        <h2 class="text-4xl mb-6 glow-text">CONFIGURAÇÕES POR MARCA DE CELULAR</h2>
-        <p class="text-xl mb-6 max-w-2xl px-4">Encontre as melhores sensibilidades otimizadas para seu dispositivo móvel.</p>
-        <div class="flex space-x-4">
-            <button class="btn-primary pulse">JOGAR AGORA</button>
-            <button onclick="nextPage(2)" class="btn-primary bg-gray-700 hover:bg-gray-600">PRÓXIMA PÁGINA</button>
-        </div>
-    </section>
-
-    <!-- Brands Section -->
-    <section class="py-12 px-4">
-        <div class="container mx-auto">
-            <div class="flex justify-between items-center mb-8">
-                <h2 class="text-3xl text-center glow-text">MARCAS POPULARES</h2>
-                <button onclick="prevPage()" class="btn-primary bg-red-600 hover:bg-red-700 text-sm py-1 px-3">VOLTAR</button>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
-                <!-- Brand Card 1 -->
-                <div class="character-card">
-                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/237ad27e-bc1f-4815-a2f1-0c966557f5d8.png" alt="Logo Xiaomi Redmi com fundo laranja">
-                    <div class="p-4">
-                        <h3 class="text-xl text-orange-500 mb-2">XIAOMI</h3>
-                        <p class="text-gray-300">Geral:    195</p>
-                        <p class="text-gray-300">Red Dot:  180</p>
-                        <p class="text-gray-300">4x MIRA:  160</p>
-                        <p class="text-gray-300">2x MIRA: 170</p>
-                        <p class="text-gray-300">AWM: 100</p>
-                        <p class="text-gray-300">OLHADINHA: 135</p>
-                        <div class="mt-4 flex justify-center space-x-2">
-                            <button class="btn-primary py-1 px-3 text-sm bg-gray-700">Detalhes</button>
-                            <button class="btn-primary py-1 px-3 text-sm">Copiar</button>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Brand Card 2 -->
-                <div class="character-card">
-                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/facb130d-6537-4ff2-ba8c-2ed712173de3.png" alt="Logo Samsung Galaxy com fundo vermelho">
-                    <div class="p-4">
-                        <h3 class="text-xl text-orange-500 mb-2">SAMSUNG</h3>
-                        <p class="text-gray-300">Geral: 130</p>
-                        <p class="text-gray-300">Red Dot: 175</p>
-                        <p class="text-gray-300">4X MIRA: 155</p>
-                        <p class="text-gray-300">2x MIRA: 165</p>
-                        <p class="text-gray-300">AWM: 100</p>
-                        <p class="text-gray-300">OLHADINHA: 70</p>
-                    </div>
-                </div>
-                
-                <!-- Brand Card 3 -->
-                <div class="character-card">
-                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/b52c405f-257d-4914-95cb-ac97fdc0d03e.png" alt="Logo Apple iPhone com fundo preto">
-                    <div class="p-4">
-                        <h3 class="text-xl text-orange-500 mb-2">IPHONE</h3>
-                        <p class="text-gray-300">Geral: 185</p>
-                        <p class="text-gray-300">Red Dot: 170</p>
-                        <p class="text-gray-300">4x MIRA: 168</p>
-                        <p class="text-gray-300">2x MIRA: 160</p>
-                        <p class="text-gray-300">AWM: 90-95</p>
-                        <p class="text-gray-300">OLHADINHA: 25-30</p>
-                    </div>
-                </div>
-                
-                <!-- Brand Card 4 -->
-                <div class="character-card">
-                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/fe9f494d-4219-4d11-8734-22685b9d9456.png" alt="Logo Asus ROG Phone com fundo azul">
-                    <div class="p-4">
-                        <h3 class="text-xl text-orange-500 mb-2">ASUS ROG</h3>
-                        <p class="text-gray-300">Sensibilidade: 95-100 Geral.</p>
-                    </div>
-                </div>
-                
-                <!-- Brand Card 5 -->
-                <div class="character-card">
-                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/74a41453-cd98-40e9-89b2-bb10c2f7713e.png" alt="Logo Motorola com fundo roxo">
-                    <div class="p-4">
-                        <h3 class="text-xl text-orange-500 mb-2">MOTOROLA</h3>
-                        <p class="text-gray-300">Geral:    190</p>
-                        <p class="text-gray-300">Red Dot:  175</p>
-                        <p class="text-gray-300">4x MIRA: 175</p>
-                        <p class="text-gray-300">2x MIRA: 165</p>
-                        <p class="text-gray-300">Olhadinha: 90-100</p>
-                        <p class="text-gray-300">AWM: 30-35</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Game Features -->
-    <section class="py-12 px-4 bg-gradient-to-b from-gray-900 to-black">
-        <div class="container mx-auto">
-            <h2 class="text-3xl text-center mb-12 glow-text">AJUSTES RECOMENDADOS</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- Feature 1 -->
-                <div class="feature-box">
-                    <div class="text-center mb-4">
-                        <div class="rank-badge">1</div>
-                    </div>
-                    <h3 class="text-xl text-center text-orange-500 mb-3">OLHADINHA</h3>
-                    <p class="text-center">90-100 para rápida resposta em combates próximos</p>
-                </div>
-                
-                <!-- Feature 2 -->
-                <div class="feature-box">
-                    <div class="text-center mb-4">
-                        <div class="rank-badge">2</div>
-                    </div>
-                    <h3 class="text-xl text-center text-orange-500 mb-3">AWM</h3>
-                    <p class="text-center">25-40 para controle preciso do sniper</p>
-                </div>
-                
-                <!-- Feature 3 -->
-                <div class="feature-box">
-                    <div class="text-center mb-4">
-                        <div class="rank-badge">3</div>
-                    </div>
-                    <h3 class="text-xl text-center text-orange-500 mb-3">RED DOT</h3>
-                    <p class="text-center">65-80 para melhor precisão em média distância</p>
-                </div>
-                
-                <!-- Feature 4 -->
-                <div class="feature-box">
-                    <div class="text-center mb-4">
-                        <div class="rank-badge">4</div>
-                    </div>
-                    <h3 class="text-xl text-center text-orange-500 mb-3">2X SCOPE</h3>
-                    <p class="text-center">55-70 para equilíbrio entre precisão e velocidade</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Divider -->
-    <div class="divider"></div>
-
-    <!-- News Section -->
-    <section class="py-12 px-4">
-        <div class="container mx-auto">
-            <h2 class="text-3xl text-center mb-12 glow-text">ÚLTIMAS NOTÍCIAS</h2>
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                <!-- News 1 -->
-                <div class="news-card p-6">
-                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/659d5d7c-270d-4ecc-b0a5-d385f47f916b.png" alt="Novo mapa de Free Fire chamado Alpine com paisagens montanhosas cobertas de neve" class="mb-4 w-full">
-                    <h3 class="text-xl text-orange-500 mb-3">NOVO MAPA ALPINE</h3>
-                    <p class="mb-4">O novo mapa traz desafios em um ambiente gelado com novas mecânicas de sobrevivência.</p>
-                    <button class="btn-primary">SAIBA MAIS</button>
-                </div>
-                
-                <!-- News 2 -->
-                <div class="news-card p-6">
-                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/7b208b63-a264-4014-81e7-a05411c8efc2.png" alt="Personagem nova Chrono com poderes de manipulação temporal e traje futurista" class="mb-4 w-full">
-                    <h3 class="text-xl text-orange-500 mb-3">PERSONAGEM NOVO</h3>
-                    <p class="mb-4">Chrono chega com habilidades de manipulação temporal que podem virar o jogo.</p>
-                    <button class="btn-primary">SAIBA MAIS</button>
-                </div>
-                
-                <!-- News 3 -->
-                <div class="news-card p-6">
-                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/c3c8c620-9515-4734-9c74-1082cf068774.png" alt="Evento especial Collab com filme famoso mostrando skins temáticas e missões especiais" class="mb-4 w-full">
-                    <h3 class="text-xl text-orange-500 mb-3">EVENTO ESPECIAL</h3>
-                    <p class="mb-4">Colab com grande sucesso do cinema traz skins exclusivas e recompensas limitadas.</p>
-                    <button class="btn-primary">SAIBA MAIS</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <!-- Column 1 -->
-                <div>
-                    <h4 class="text-xl text-orange-500 mb-4">FREE FIRE</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="hover:text-orange-500">Sobre o jogo</a></li>
-                        <li><a href="#" class="hover:text-orange-500">Personagens</a></li>
-                        <li><a href="#" class="hover:text-orange-500">Mapas</a></li>
-                        <li><a href="#" class="hover:text-orange-500">Armas</a></li>
-                    </ul>
-                </div>
-                
-                <!-- Column 2 -->
-                <div>
-                    <h4 class="text-xl text-orange-500 mb-4">COMUNIDADE</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="hover:text-orange-500">Fórum</a></li>
-                        <li><a href="#" class="hover:text-orange-500">Torneios</a></li>
-                        <li><a href="#" class="hover:text-orange-500">Guia para novatos</a></li>
-                        <li><a href="#" class="hover:text-orange-500">Clubes</a></li>
-                    </ul>
-                </div>
-                
-                <!-- Column 3 -->
-                <div>
-                    <h4 class="text-xl text-orange-500 mb-4">SUPORTE</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="hover:text-orange-500">Central de ajuda</a></li>
-                        <li><a href="#" class="hover:text-orange-500">Reportar problemas</a></li>
-                        <li><a href="#" class="hover:text-orange-500">Política de privacidade</a></li>
-                        <li><a href="#" class="hover:text-orange-500">Termos de serviço</a></li>
-                    </ul>
-                </div>
-                
-                <!-- Column 4 -->
-                <div>
-                    <h4 class="text-xl text-orange-500 mb-4">REDES SOCIAIS</h4>
-                    <div class="flex space-x-4">
-                        <a href="#" class="text-white hover:text-orange-500 bg-gray-800 rounded-full w-10 h-10 flex items-center justify-center">FB</a>
-                        <a href="#" class="text-white hover:text-orange-500 bg-gray-800 rounded-full w-10 h-10 flex items-center justify-center">TW</a>
-                        <a href="#" class="text-white hover:text-orange-500 bg-gray-800 rounded-full w-10 h-10 flex items-center justify-center">IG</a>
-                        <a href="#" class="text-white hover:text-orange-500 bg-gray-800 rounded-full w-10 h-10 flex items-center justify-center">YT</a>
-                    </div>
-                    <p class="mt-6">Baixe agora:</p>
-                    <div class="flex space-x-4 mt-2">
-                        <a href="#"><img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/eee4ee12-3818-467d-9a1a-652b669a9aa3.png" alt="Disponível na App Store"></a>
-                        <a href="#"><img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/ae4db719-4592-460f-bc39-c03fdf2c1627.png" alt="Disponível no Google Play"></a>
-                    </div>
-                </div>
+        <nav>
+            <a href="#products">Produtos</a>
+            <a href="#contact">Contato</a>
+        </nav>
+    </header>
+    
+    <section id="products">
+        <h2>Nossos Produtos</h2>
+        <div class="products">
+            <!-- Card do Produto 1 -->
+            <div class="product-card">
+                <img src="https://via.placeholder.com/300?text=Pod+IGNET+V400" alt="Pod IGNET V400">
+                <h2>Pod IGNET V400</h2>
+                <p>Preço: R$ 145,00</p>
+                <p>Descrição: Um pod avançado com alta performance e durabilidade.</p>
+                <button onclick="sendWhatsApp('Pod IGNET V400')">Comprar</button>
             </div>
             
-            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500">
-                <p>© 2023 Free Fire Universe. Todos os direitos reservados.</p>
+            <!-- Card do Produto 2 -->
+            <div class="product-card">
+                <img src="https://via.placeholder.com/300?text=Pod+IGNET+V300" alt="Pod IGNET V300">
+                <h2>Pod IGNET V300</h2>
+                <p>Preço: R$ 130,00</p>
+                <p>Descrição: Modelo intermediário com funcionalidades essenciais.</p>
+                <button onclick="sendWhatsApp('Pod IGNET V300')">Comprar</button>
+            </div>
+            
+            <!-- Card do Produto 3 -->
+            <div class="product-card">
+                <img src="https://via.placeholder.com/300?text=Pod+IGNET+V155" alt="Pod IGNET V155">
+                <h2>Pod IGNET V155</h2>
+                <p>Preço: R$ 120,00</p>
+                <p>Descrição: Opção básica e acessível para uso diário.</p>
+                <button onclick="sendWhatsApp('Pod IGNET V155')">Comprar</button>
             </div>
         </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2023 TVS.pod - Todos os direitos reservados.</p>
     </footer>
-
+    
     <script>
-        // Page Navigation
-        function nextPage(pageNum) {
-            document.querySelector('.page.active').classList.remove('active');
-            document.getElementById('page'+pageNum).classList.add('active');
+        function sendWhatsApp(productName) {
+            var phoneNumber = "+55 43 99981-1373";  // Número de telefone fornecido
+            var message = "Estou interessado no produto: " + productName;  // Mensagem personalizada
+            
+            // Limpar o número de telefone: remover +, espaços e hífens
+            var cleanPhoneNumber = phoneNumber.replace(/[\+\s-]/g, '');
+            
+            // Criar o URI para WhatsApp
+            var whatsappURI = "https://wa.me/" + cleanPhoneNumber + "?text=" + encodeURIComponent(message);
+            
+            // Redirecionar para o URI do WhatsApp
+            window.location.href = whatsappURI;
         }
-        
-        function prevPage() {
-            const activePage = document.querySelector('.page.active');
-            const prevPage = activePage.previousElementSibling;
-            if(prevPage && prevPage.classList.contains('page')) {
-                activePage.classList.remove('active');
-                prevPage.classList.add('active');
-            }
-        }
-
-        // Simulando páginas diferentes
-        document.querySelectorAll('nav a').forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                const page = this.textContent.toLowerCase();
-                alert(`Carregando página: ${page}`);
-            });
-        });
-
-        // Botões das marcas
-        document.querySelectorAll('.character-card button').forEach(btn => {
-            btn.addEventListener('click', function() {
-                const action = this.textContent.toLowerCase();
-                const brand = this.closest('.character-card').querySelector('h3').textContent;
-                if(action === 'copiar') {
-                    const sensibilidade = this.closest('.character-card').querySelector('p').textContent;
-                    navigator.clipboard.writeText(sensibilidade);
-                    alert(`Configurações de ${brand} copiadas!`);
-                } else {
-                    alert(`Mostrando detalhes para ${brand}`);
-                }
-            });
-        });
-
-        // Efeito de digitação no título
-        document.addEventListener('DOMContentLoaded', function() {
-            const titles = document.querySelectorAll('.glow-text');
-            
-            // Efeito de pulsação alternada nos botões
-            const buttons = document.querySelectorAll('.btn-primary');
-            buttons.forEach((btn, index) => {
-                btn.style.animationDelay = `${index * 0.2}s`;
-            });
-            
-            // Efeito de hover nas cartas de personagens
-            const characterCards = document.querySelectorAll('.character-card');
-            characterCards.forEach(card => {
-                card.addEventListener('mouseenter', function() {
-                    const audio = new Audio('https://www.soundjay.com/buttons/sounds/button-10.mp3');
-                    audio.volume = 0.3;
-                    audio.play();
-                });
-            });
-            
-            // Animação de rolagem suave
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    document.querySelector(this.getAttribute('href')).scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                });
-            });
-        });
     </script>
 </body>
 </html>
