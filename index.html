@@ -3,70 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TVS.pod - Vendas de Pods IGNET</title>
-    <link rel="stylesheet" href="style.css"> <!-- Vinculando o CSS -->
+    <title>Gerador de Sensi Free Fire</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            text-align: center;
+        }
+        header {
+            background-color: #ff4500;
+            color: white;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .sensi-item {
+            margin: 10px 0;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        .sensi-item strong {
+            color: #ff4500;
+        }
+        button {
+            background-color: #ff4500;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #e03e00;
+        }
+        footer {
+            margin-top: 20px;
+            font-size: 12px;
+            color: #666;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <div class="logo">
-            <h1>TVS.pod</h1>
-        </div>
-        <nav>
-            <a href="#products">Produtos</a>
-            <a href="#contact">Contato</a>
-        </nav>
+        <h1>Gerador de Sensibilidade Free Fire</h1>
+        <p>Gere configurações aleatórias de sensi para melhorar seu gameplay! Valores variam de 100 a 200.</p>
     </header>
     
-    <section id="products">
-        <h2>Nossos Produtos</h2>
-        <div class="products">
-            <!-- Card do Produto 1 -->
-            <div class="product-card">
-                <img src="https://via.placeholder.com/300?text=Pod+IGNET+V400" alt="Pod IGNET V400">
-                <h2>Pod IGNET V400</h2>
-                <p>Preço: R$ 145,00</p>
-                <p>Descrição: Um pod avançado com alta performance e durabilidade.</p>
-                <button onclick="sendWhatsApp('Pod IGNET V400')">Comprar</button>
-            </div>
-            
-            <!-- Card do Produto 2 -->
-            <div class="product-card">
-                <img src="https://via.placeholder.com/300?text=Pod+IGNET+V300" alt="Pod IGNET V300">
-                <h2>Pod IGNET V300</h2>
-                <p>Preço: R$ 130,00</p>
-                <p>Descrição: Modelo intermediário com funcionalidades essenciais.</p>
-                <button onclick="sendWhatsApp('Pod IGNET V300')">Comprar</button>
-            </div>
-            
-            <!-- Card do Produto 3 -->
-            <div class="product-card">
-                <img src="https://via.placeholder.com/300?text=Pod+IGNET+V155" alt="Pod IGNET V155">
-                <h2>Pod IGNET V155</h2>
-                <p>Preço: R$ 120,00</p>
-                <p>Descrição: Opção básica e acessível para uso diário.</p>
-                <button onclick="sendWhatsApp('Pod IGNET V155')">Comprar</button>
-            </div>
+    <div class="container">
+        <h2>Configurações Geradas</h2>
+        <div id="sensi-list">
+            <!-- Os valores serão gerados aqui via JavaScript -->
         </div>
-    </section>
+        <button onclick="generateSensi()">Gerar Nova Sensi</button>
+    </div>
     
     <footer>
-        <p>&copy; 2023 TVS.pod - Todos os direitos reservados.</p>
+        <p>Dica: Teste essas configurações no jogo e ajuste conforme seu estilo. Baseado no Free Fire oficial. Visite <a href="https://freefire.garena.com/" target="_blank" style="color: #ff4500;">Garena Free Fire</a> para mais.</p>
     </footer>
     
     <script>
-        function sendWhatsApp(productName) {
-            var phoneNumber = "+55 43 99981-1373";  // Número de telefone fornecido
-            var message = "Estou interessado no produto: " + productName;  // Mensagem personalizada
+        function generateSensi() {
+            const categories = [
+                { name: "Red Dot", desc: "Sensibilidade para mira vermelha." },
+                { name: "Geral", desc: "Sensibilidade geral do controle." },
+                { name: "Mira 2x", desc: "Sensibilidade para mira 2x." },
+                { name: "Mira 4x", desc: "Sensibilidade para mira 4x." },
+                { name: "AWM", desc: "Sensibilidade para sniper AWM." },
+                { name: "Olhadinha", desc: "Sensibilidade para movimento rápido de câmera." }
+            ];
             
-            // Limpar o número de telefone: remover +, espaços e hífens
-            var cleanPhoneNumber = phoneNumber.replace(/[\+\s-]/g, '');
+            let html = "";
+            categories.forEach(cat => {
+                const value = Math.floor(Math.random() * (200 - 100 + 1)) + 100; // Aleatório entre 100 e 200
+                html += `<div class="sensi-item"><strong>${cat.name}:</strong> ${value} <br><small>${cat.desc}</small></div>`;
+            });
             
-            // Criar o URI para WhatsApp
-            var whatsappURI = "https://wa.me/" + cleanPhoneNumber + "?text=" + encodeURIComponent(message);
-            
-            // Redirecionar para o URI do WhatsApp
-            window.location.href = whatsappURI;
+            document.getElementById("sensi-list").innerHTML = html;
         }
+        
+        // Gera uma configuração inicial ao carregar a página
+        window.onload = generateSensi;
     </script>
 </body>
 </html>
