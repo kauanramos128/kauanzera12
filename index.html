@@ -1,99 +1,59 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gerador de Sensi Free Fire</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-            color: #333;
-            text-align: center;
-        }
-        header {
-            background-color: #ff4500;
-            color: white;
-            padding: 20px;
-        }
-        .container {
-            max-width: 600px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-        .sensi-item {
-            margin: 10px 0;
-            padding: 10px;
-            border-bottom: 1px solid #ddd;
-        }
-        .sensi-item strong {
-            color: #ff4500;
-        }
-        button {
-            background-color: #ff4500;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            font-size: 16px;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-top: 20px;
-        }
-        button:hover {
-            background-color: #e03e00;
-        }
-        footer {
-            margin-top: 20px;
-            font-size: 12px;
-            color: #666;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Banco Digital</title>
+<link rel="stylesheet" href="style.css">
+<script type="module" src="firebase-config.js"></script>
+<script type="module" src="app.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <h1>Gerador de Sensibilidade Free Fire</h1>
-        <p>Gere configurações aleatórias de sensi para melhorar seu gameplay! Valores variam de 100 a 200.</p>
-    </header>
-    
-    <div class="container">
-        <h2>Configurações Geradas</h2>
-        <div id="sensi-list">
-            <!-- Os valores serão gerados aqui via JavaScript -->
-        </div>
-        <button onclick="generateSensi()">Gerar Nova Sensi</button>
+    <div id="login-container">
+        <h2>Login</h2>
+        <input type="email" id="email" placeholder="Email">
+        <input type="password" id="password" placeholder="Senha">
+        <button id="btn-login">Entrar</button>
+        <button id="btn-register">Cadastrar</button>
+      </div>
+  <div id="dashboard" style="display:none;">
+    <header>Conta</header>
+    <div class="saldo" id="saldo">R$ 0,00</div>
+
+    <div class="buttons">
+      <div class="button" onclick="acao('Área Pix')">
+        <div class="button-circle"><i class="fas fa-qrcode"></i></div>
+        <span>Área Pix</span>
+      </div>
+      <div class="button" onclick="acao('Pagar')">
+        <div class="button-circle"><i class="fas fa-barcode"></i></div>
+        <span>Pagar</span>
+      </div>
+      <div class="button" onclick="acao('Empréstimo')">
+        <div class="button-circle"><i class="fas fa-money-bill-wave"></i></div>
+        <span>Pegar emprestado</span>
+      </div>
+      <div class="button" onclick="acao('Transferir')">
+        <div class="button-circle"><i class="fas fa-arrow-right-arrow-left"></i></div>
+        <span>Transferir</span>
+      </div>
     </div>
-    
-    <footer>
-        <p>Dica: Teste essas configurações no jogo e ajuste conforme seu estilo. Baseado no Free Fire oficial. Visite <a href="https://freefire.garena.com/" target="_blank" style="color: #ff4500;">Garena Free Fire</a> para mais.</p>
-    </footer>
-    
-    <script>
-        function generateSensi() {
-            const categories = [
-                { name: "Red Dot", desc: "Sensibilidade para mira vermelha." },
-                { name: "Geral", desc: "Sensibilidade geral do controle." },
-                { name: "Mira 2x", desc: "Sensibilidade para mira 2x." },
-                { name: "Mira 4x", desc: "Sensibilidade para mira 4x." },
-                { name: "AWM", desc: "Sensibilidade para sniper AWM." },
-                { name: "Olhadinha", desc: "Sensibilidade para movimento rápido de câmera." }
-            ];
-            
-            let html = "";
-            categories.forEach(cat => {
-                const value = Math.floor(Math.random() * (200 - 100 + 1)) + 100; // Aleatório entre 100 e 200
-                html += `<div class="sensi-item"><strong>${cat.name}:</strong> ${value} <br><small>${cat.desc}</small></div>`;
-            });
-            
-            document.getElementById("sensi-list").innerHTML = html;
-        }
-        
-        // Gera uma configuração inicial ao carregar a página
-        window.onload = generateSensi;
-    </script>
+
+    <div class="card" id="cartao">
+      <h3>Cartão de crédito</h3>
+      <p>Fatura atual: R$ 0,00</p>
+      <p>Limite disponível: R$ 0,00</p>
+    </div>
+
+    <div class="card" id="emprestimo">
+      <h3>Empréstimo</h3>
+      <p>Valor disponível de até R$ 50.000,00</p>
+    </div>
+
+    <div class="fab" onclick="alert('Ação rápida clicada')">
+      <i class="fas fa-arrows-up-down-left-right"></i>
+    </div>
+  </div>
 </body>
 </html>
